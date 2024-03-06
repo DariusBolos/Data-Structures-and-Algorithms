@@ -1,0 +1,13 @@
+# ninja log v5
+2	51	1709731731505287947	CMakeFiles/adt_map.dir/Map.cpp.o	f1a189f4defd0a7c
+2	180	1709732316563709661	CMakeFiles/adt_map.dir/App.cpp.o	ebeffa53a5c98f99
+2	195	1709731881307542719	CMakeFiles/adt_map.dir/ExtendedTest.cpp.o	6791f073b9daa6e2
+1	210	1709730076097773533	CMakeFiles/adt_map.dir/MapIterator.cpp.o	65198ab5df591921
+1	47	1709731749934628499	CMakeFiles/adt_map.dir/ShortTest.cpp.o	bca60eca1b42dd1e
+180	201	1709732316586405483	adt_map	44ee25401b08d1bd
+2	52	1709732761037220845	CMakeFiles/adt_map.dir/ShortTest.cpp.o	e1203f5318a1f497
+2	54	1709732761039313632	CMakeFiles/adt_map.dir/MapIterator.cpp.o	ee576b7da3bff939
+2	54	1709732761040019464	CMakeFiles/adt_map.dir/Map.cpp.o	c69bdba33cd863f9
+2	201	1709732761186038111	CMakeFiles/adt_map.dir/App.cpp.o	8ab6785e4bdfe372
+2	212	1709732761196923880	CMakeFiles/adt_map.dir/ExtendedTest.cpp.o	b203d5d15aedba3e
+212	236	1709732761221774619	adt_map	44ee25401b08d1bd
