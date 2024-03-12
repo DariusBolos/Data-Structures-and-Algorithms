@@ -15,5 +15,3 @@ public:
 	TElem getCurrent();
 	bool valid() const;
 };
-
-

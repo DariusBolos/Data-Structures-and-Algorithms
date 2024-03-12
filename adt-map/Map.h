@@ -43,13 +43,15 @@ class Map {
 	//checks whether the map is empty or not
 	bool isEmpty() const;
 
+    //extends the capacity of the dynamic array
+    void resizeUp();
+
+    //cuts down from the capacity of the dynamic array
+    void resizeDown();
+
 	//returns an iterator for the map
 	MapIterator iterator() const;
 
 	// destructor
 	~Map();
-
 };
-
-
-

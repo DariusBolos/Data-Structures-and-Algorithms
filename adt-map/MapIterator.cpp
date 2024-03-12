@@ -37,6 +37,3 @@ TElem MapIterator::getCurrent(){
 bool MapIterator::valid() const {
 	return this->index < this->map.length;
 }
-
-
-

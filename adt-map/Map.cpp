@@ -8,10 +8,16 @@ Map::Map() {
     this->elements = new TElem[this->capacity];
 }
 
+
 Map::~Map() {
 	delete[] this->elements;
 }
 
+/*
+ * best case: θ()
+ * average case: θ()
+ * worst case: θ()
+ */
 TValue Map::add(TKey c, TValue v){
 	for (int index = 0; index < this->length; ++index) {
         if (c == this->elements[index].first) {
@@ -22,19 +28,11 @@ TValue Map::add(TKey c, TValue v){
     }
 
     if (this->length == this->capacity) {
-        this->capacity = 2 * this->capacity;
-        TElem *newElements = new TElem[this->capacity];
-
-        for (int index = 0; index < this->length; ++index) {
-            newElements[index] = this->elements[index];
-        }
-
-        delete[] this->elements;
-        this->elements = newElements;
+        this->resizeUp();
     }
 
 
-    this->elements[length++] = TElem(c, v);
+    this->elements[this->length++] = TElem(c, v);
 
 
 	return NULL_TVALUE;
@@ -58,6 +56,11 @@ TValue Map::remove(TKey c){
             }
 
             this->length--;
+
+            if (this->length < this->capacity / 4) {
+                this->resizeDown();
+            }
+
             return deletedElement;
         }
     }
@@ -73,9 +76,30 @@ bool Map::isEmpty() const{
 	return this->length == 0;
 }
 
+void Map::resizeUp() {
+    this->capacity = 2 * this->capacity;
+    TElem *newElements = new TElem[this->capacity];
+
+    for (int index = 0; index < this->length; ++index) {
+        newElements[index] = this->elements[index];
+    }
+
+    delete[] this->elements;
+    this->elements = newElements;
+}
+
+void Map::resizeDown() {
+    this->capacity /= 2;
+    TElem *newElements = new TElem[this->capacity];
+
+    for (int position = 0; position < this->length; ++position) {
+        newElements[position] = this->elements[position];
+    }
+
+    delete[] this->elements;
+    this->elements = newElements;
+}
+
 MapIterator Map::iterator() const {
 	return MapIterator(*this);
 }
-
-
-
